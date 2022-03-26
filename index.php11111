@@ -1,0 +1,11 @@
+<?php
+$actual_link = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+
+
+if ($actual_link == 'http://pop.appsdashboard.xyz' || $actual_link == 'http://pop.appsdashboard.xyz/'){
+  //You need to redirect
+  header("Location: http://pop.appsdashboard.xyz:3000"); /* Redirect browser */
+  exit();
+ }
+ 
+ ?>

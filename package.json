@@ -1,0 +1,49 @@
+{
+  "name": "sample-node-api",
+  "version": "1.0.0",
+  "description": "Top-api",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon src/index.js",
+    "dev:https": "nodemon src/index.js --key sslcert/server.key --cert sslcert/server.cert",
+    "start": "node index.js",
+    "build": "npm run clean && cp -r src dist/src && cp -r bin dist/bin && cp *.yml dist && cp *.yaml dist && cp *.json dist && cp README.md dist && cp LICENSE dist",
+    "clean": "rimraf dist && mkdirp dist"
+  },
+  "author": "",
+  "license": "EPL-2.0",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.5",
+    "cookie-session": "^1.4.0",
+    "cors": "^2.8.5",
+    "csv-writer": "^1.6.0",
+    "dotenv": "^10.0.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "express-session": "^1.17.2",
+    "multer": "^1.4.2",
+    "mysql": "^2.18.1",
+    "nodemailer": "^6.6.3",
+    "passport": "^0.5.0",
+    "passport-facebook": "^3.0.0",
+    "passport-google-oauth": "^2.0.0",
+    "passport-google-oauth2": "^0.2.0",
+    "passport-oauth2": "^1.6.1",
+    "password-reset-nodemailer": "0.0.1",
+    "path": "^0.12.7",
+    "q": "^1.5.1",
+    "randomstring": "^1.2.1",
+    "request": "^2.88.2",
+    "stripe": "^8.163.0",
+    "swagger-ui-express": "^4.1.4",
+    "yargs": "^14.2.1"
+  },
+  "devDependencies": {
+    "mkdirp": "^1.0.3",
+    "node-fetch": "^2.6.1",
+    "nodemon": "^2.0.15",
+    "rimraf": "^3.0.2"
+  }
+}
